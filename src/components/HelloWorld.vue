@@ -45,21 +45,21 @@
                 return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
             }
 
-            TradingView.onready(function()
-            {
+            TradingView.onready(function () {
                 window.tvWidget = new TradingView.widget({
                     // debug: true, // uncomment this line to see Library errors and warnings in the console
                     fullscreen: true,
-                    symbol: 'AAPL',
+                    symbol: 'MSFT',
                     interval: 'D',
                     container_id: "tv_chart_container",
                     //	BEWARE: no trailing slash is expected in feed URL
-                    datafeed: new Datafeeds.UDFCompatibleDatafeed("/data"),
+                    datafeed: new Datafeeds.UDFCompatibleDatafeed("http://localhost:3000"), // local data feeds services
+                    // datafeed: new Datafeeds.UDFCompatibleDatafeed("/data"), // local data
                     // datafeed: new Datafeeds.UDFCompatibleDatafeed("https://demo_feed.tradingview.com"),
                     library_path: "charting_library/",
                     locale: getParameterByName('lang') || "en",
                     //	Regression Trend-related functionality is not implemented yet, so it's hidden for a while
-                    drawings_access: { type: 'black', tools: [ { name: "Regression Trend" } ] },
+                    drawings_access: {type: 'black', tools: [{name: "Regression Trend"}]},
                     disabled_features: ["use_localstorage_for_settings"],
                     enabled_features: ["study_templates"],
                     charts_storage_url: 'http://saveload.tradingview.com',

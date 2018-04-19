@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!--<img src="./assets/logo.png">-->
-    <HelloWorld msg="俊瑞Coin"/>
+    <HelloWorld msg="俊芮Coin"/>
   </div>
 </template>
 
