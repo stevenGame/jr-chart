@@ -5,9 +5,12 @@
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "server":"node server/server.js"
   },
   "dependencies": {
+    "sequelize": "^4.37.6",
+    "sqlite3": "^4.0.0",
     "vue": "^2.5.13"
   },
   "devDependencies": {
@@ -22,7 +25,7 @@
     ]
   },
   "eslintConfig": {
-    "root": true,
+    "root": false,
     "extends": [
       "plugin:vue/essential",
       "eslint:recommended"
