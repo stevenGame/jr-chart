@@ -20,3 +20,10 @@ $ npm run datafeeds
 ```bash
 $ npm run serve
 ```
+
+### TODO
+- [x] indcator such as Accumulation/Distribution is
+      on the header analysis button
+- [ ]  charts widget dark theme overrides on wiget
+      (docs/Overrides.md)[Overrides]
+- [ ] support multiple charts only aviable on trading terminal version

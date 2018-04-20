@@ -57,7 +57,7 @@
                     // datafeed: new Datafeeds.UDFCompatibleDatafeed("/data"), // local data
                     // datafeed: new Datafeeds.UDFCompatibleDatafeed("https://demo_feed.tradingview.com"),
                     library_path: "charting_library/",
-                    locale: getParameterByName('lang') || "en",
+                    locale: getParameterByName('lang') || "zh",
                     //	Regression Trend-related functionality is not implemented yet, so it's hidden for a while
                     drawings_access: {type: 'black', tools: [{name: "Regression Trend"}]},
                     disabled_features: ["use_localstorage_for_settings"],
@@ -65,7 +65,21 @@
                     charts_storage_url: 'http://saveload.tradingview.com',
                     charts_storage_api_version: "1.1",
                     client_id: 'tradingview.com',
-                    user_id: 'public_user_id'
+                    user_id: 'public_user_id',
+                    widgetbar: {
+                        details: true,
+                        watchlist: true,
+                        watchlist_settings: {
+                            default_symbols: ["NASDAQ:AAPL", "NASDAQ:MSFT"],
+                            readonly: false
+                        }
+                    },
+
+                    // charts widget theme overrides but i think if we switch to the trading-terminal
+                    // we will have default setting for dark them
+                    overrides: {
+                        "paneProperties.background": "#000"
+                    }
                 });
             });
         }
